@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:title=" A LA UNE"
+        android:id="@+id/nav_item_ala_une"
+        android:icon="@drawable/home"/>
+
+    <item android:title="LE FLASH"
+        android:id="@+id/nav_item_le_flash"
+        android:icon="@drawable/clock"/>
+
+    <item android:title="VIDEOS"
+        android:id="@+id/nav_item_videos"
+        android:icon="@drawable/play_circle_outline"/>
+
+
+
+    <item android:title="Others">
+        <menu>
+            <item android:title="Settings"
+                android:icon="@drawable/backburger"/>
+            <item android:title="Help"
+                android:icon="@drawable/newspaper"/>
+        </menu>
+    </item>
+
+
+</menu>

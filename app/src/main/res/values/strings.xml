@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">AlyaLeFigaro</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+
+    <string name="imgdesc">imgdesc</string><string-array name="titles">
+    <item>A La Une </item>
+    <item>Le Flash</item>
+    <item>Ma Une</item>
+    <item>Videos</item></string-array>
+
+    <array name="icons">
+        <item>@drawable/home </item>
+        <item>@drawable/clock </item>
+        <item>@drawable/newspaper </item>
+        <item>@drawable/play_circle_outline</item>
+
+    </array>
+</resources>
