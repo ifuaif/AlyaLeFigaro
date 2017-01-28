@@ -4,7 +4,10 @@
     <string name="section_format">Hello World from section: %1$d</string>
 
 
-    <string name="imgdesc">imgdesc</string><string-array name="titles">
+    <string name="imgdesc">imgdesc</string>
+    <string name="navigation_drawer_open">navDrawOpen</string>
+    <string name="navigation_drawer_close">navDrawClose</string>
+    <string-array name="titles">
     <item>A La Une </item>
     <item>Le Flash</item>
     <item>Ma Une</item>
