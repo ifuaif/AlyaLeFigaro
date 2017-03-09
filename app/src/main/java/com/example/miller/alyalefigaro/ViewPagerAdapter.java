@@ -16,9 +16,9 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
             return new ALaUne();
         } else if (position == 1) {
             return new LeFlash();
-        } else if (position == 2) {
-            return new MaUne();
-        } else return new Videos();
+        } else if (position == 3 )
+            return new Videos();
+        return new MaUne();
     }
 
     @Override

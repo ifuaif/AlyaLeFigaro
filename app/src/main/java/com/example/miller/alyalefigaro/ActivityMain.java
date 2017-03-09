@@ -1,7 +1,7 @@
 package com.example.miller.alyalefigaro;
 
 
-import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
@@ -9,17 +9,17 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 
 
 public class ActivityMain extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
+
     private ViewPager viewPager;
     private DrawerLayout drawer;
     private TabLayout tabLayout;
-    private String[] pageTitle = {"Fragment 1", "Fragment 2", "Fragment 3"};
+    private String[] pageTitle = {"A LA UNE", "LE FLAHS", "MA UNE", "VIDEOS"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +40,7 @@ public class ActivityMain extends AppCompatActivity implements NavigationView.On
 
         //setting Tab layout (number of Tabs = number of ViewPager pages)
         tabLayout = (TabLayout) findViewById(R.id.tab_layout);
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 4; i++) {
             tabLayout.addTab(tabLayout.newTab().setText(pageTitle[i]));
         }
 
@@ -76,6 +76,7 @@ public class ActivityMain extends AppCompatActivity implements NavigationView.On
 
             }
         });
+
     }
 
     @Override
@@ -87,8 +88,7 @@ public class ActivityMain extends AppCompatActivity implements NavigationView.On
         } else if (id == R.id.nav_item_le_flash) {
             viewPager.setCurrentItem(1);
         } else if (id == R.id.nav_item_videos) {
-            viewPager.setCurrentItem(2);
-            finish();
+            viewPager.setCurrentItem(3);
         }
 
         drawer.closeDrawer(GravityCompat.START);
@@ -104,4 +104,10 @@ public class ActivityMain extends AppCompatActivity implements NavigationView.On
             super.onBackPressed();
         }
     }
+
+
+    public static GetSubcategory getApi(){
+        return  null;
+    }
+
 }

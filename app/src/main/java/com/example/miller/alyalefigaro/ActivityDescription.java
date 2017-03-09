@@ -5,9 +5,9 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.widget.TextView;
 
-class DesActivity extends AppCompatActivity {
+class ActivityDescription extends AppCompatActivity{
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -15,11 +15,11 @@ class DesActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_drawer);
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
-        TextView textView = (TextView)findViewById(R.id.textView);
+//        TextView textView = (TextView)findViewById(R.id.textAll);
 
         setSupportActionBar(toolbar);
         if (getIntent() != null) {
-            textView.setText(getIntent().getStringExtra("string"));
+//            textView.setText(getIntent().getStringExtra("string"));
         }
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
