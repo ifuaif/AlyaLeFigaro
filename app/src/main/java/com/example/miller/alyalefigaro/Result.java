@@ -1,12 +1,14 @@
-
 package com.example.miller.alyalefigaro;
+
+import android.os.Parcel;
+import android.os.Parcelable;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class Result {
+ class Result implements Parcelable{
 
     @SerializedName("category")
     @Expose
@@ -15,7 +17,29 @@ public class Result {
     @Expose
     private List<Subcategory> subcategories = null;
 
-    public String getCategory() {
+     public Result() {
+
+     }
+
+     protected Result(Parcel in) {
+         category = in.readString();
+         subcategories = in.createTypedArrayList(Subcategory.CREATOR);
+     }
+
+     public static final Creator<Result> CREATOR = new Creator<Result>() {
+         @Override
+         public Result createFromParcel(Parcel in) {
+             return new Result(in);
+         }
+
+         @Override
+         public Result[] newArray(int size) {
+             return new Result[size];
+         }
+     };
+
+
+     public String getCategory() {
         return category;
     }
 
@@ -31,4 +55,14 @@ public class Result {
         this.subcategories = subcategories;
     }
 
-}
+     @Override
+     public int describeContents() {
+         return 0;
+     }
+
+     @Override
+     public void writeToParcel(Parcel dest, int flags) {
+         dest.writeString(category);
+         dest.writeTypedList(subcategories);
+     }
+ }

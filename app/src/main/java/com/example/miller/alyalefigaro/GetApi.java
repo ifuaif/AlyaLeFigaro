@@ -9,12 +9,12 @@ import retrofit2.http.GET;
  * Created by Miller on 02-03-17.
  */
 
-interface GetSubcategory {
+interface GetApi {
 
     @GET("/article/categories")
-    Call<List<Result>> allCallResult();
+    Call<List<Result>> allResult();
 
     @GET("/article/categories")
-    Call<List<Subcategory>> allSubcategoryResult();
+    Call<List<Subcategory>> allSubcategory();
 
 }
