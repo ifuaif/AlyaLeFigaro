@@ -62,6 +62,7 @@ public class ActivityMain extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
         //recyclerView.findViewById(R.id.recycle);
         listResult  = new ArrayList<>();
+
         listSubcategory  = new ArrayList<Subcategory>();
 
         Retrofit retrofit = new Retrofit.Builder().baseUrl(ENDPOINT_URL).
